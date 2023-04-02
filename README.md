@@ -1,2 +1,2 @@
-# ReelTime-API
-Reeltime api 
+# Reeltime-API
+api to the reeltime project
