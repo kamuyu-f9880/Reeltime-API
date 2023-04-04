@@ -4487,3 +4487,174 @@ Started GET "/movies/5/reviews/4" for ::1 at 2023-04-02 19:56:07 +0300
   
 ActionController::RoutingError (No route matches [GET] "/movies/5/reviews/4"):
   
+Started GET "/movies" for ::1 at 2023-04-04 10:00:12 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.9ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (1.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (90.67ms)
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 5.4ms | Allocations: 87871)
+
+
+  
+NoMethodError (undefined method `has_and_belongs_to_many' for ActorSerializer:Class):
+  
+app/serializers/actor_serializer.rb:4:in `<class:ActorSerializer>'
+app/serializers/actor_serializer.rb:1:in `<main>'
+app/controllers/movies_controller.rb:4:in `index'
+Started GET "/movie" for ::1 at 2023-04-04 10:00:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/movie"):
+  
+Started GET "/movies" for ::1 at 2023-04-04 10:00:21 +0300
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.84ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms | Allocations: 4980)
+
+
+  
+NoMethodError (undefined method `has_and_belongs_to_many' for ActorSerializer:Class):
+  
+app/serializers/actor_serializer.rb:4:in `<class:ActorSerializer>'
+app/serializers/actor_serializer.rb:1:in `<main>'
+app/controllers/movies_controller.rb:4:in `index'
+Started GET "/movies" for ::1 at 2023-04-04 10:17:32 +0300
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (2.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (1.1ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (1.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (98.35ms)
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 9.8ms | Allocations: 6538)
+
+
+  
+NoMethodError (undefined method `has_and_belongs_to_many' for ActorSerializer:Class):
+  
+app/serializers/actor_serializer.rb:4:in `<class:ActorSerializer>'
+app/serializers/actor_serializer.rb:1:in `<main>'
+app/controllers/movies_controller.rb:4:in `index'
+Started GET "/favicon.ico" for ::1 at 2023-04-04 10:17:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/movies" for ::1 at 2023-04-04 10:18:33 +0300
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.8ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (1.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (45.33ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 5.8ms | Allocations: 32018)
+
+
+  
+NoMethodError (undefined method `reviews' for #<Movie:0x00007f9906c504f8>):
+  
+app/controllers/movies_controller.rb:4:in `index'
+Started GET "/movies" for ::1 at 2023-04-04 10:19:02 +0300
+Processing by MoviesController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.17ms)
+Completed 200 OK in 16ms (Views: 5.1ms | Allocations: 10167)
+
+
+Started GET "/movies" for ::1 at 2023-04-04 10:19:03 +0300
+Processing by MoviesController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 178)
+
+
+Started GET "/movies" for ::1 at 2023-04-04 10:19:09 +0300
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.8ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (1.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (43.62ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 6.4ms | Allocations: 31912)
+
+
+  
+NoMethodError (undefined method `reviews' for #<Movie:0x00007f9906ce1c50>):
+  
+app/controllers/movies_controller.rb:4:in `index'
+Started GET "/movies" for ::1 at 2023-04-04 10:19:49 +0300
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.7ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (1.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 208], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 2]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 195], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 3]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.7ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 97], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.9ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 4]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 201], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 5]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 81], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 6]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 214], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 7]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 176], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 8]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.8ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 264], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 9]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Director Load (0.0ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 97], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 10]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 11]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 222], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 12]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 180], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 13]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 305], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "actors_movies" ON "actors"."id" = "actors_movies"."actor_id" WHERE "actors_movies"."movie_id" = ?[0m  [["movie_id", 14]]
+[active_model_serializers]   ↳ app/controllers/movies_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (140.97ms)
+Completed 200 OK in 174ms (Views: 157.1ms | ActiveRecord: 15.4ms | Allocations: 62061)
+
+

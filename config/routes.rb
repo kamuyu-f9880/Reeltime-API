@@ -5,10 +5,19 @@ Rails.application.routes.draw do
   # root "articles#index"
 
 
-  get 'movies', to: 'movies#index'
-  get 'actors', to: 'actors#index'
-  get 'users', to: 'users#index'
-  get 'reviews', to: 'reviews#index'
+
+  resources :movies, only: [:index, :show, :create, :update, :destroy] do
+    resources :reviews, only: [:index, :show, :create, :update, :destroy], module: :movies
+  end
+
+  
+
+
+
+  # get 'movies', to: 'movies#index'
+  # get 'actors', to: 'actors#index'
+  # get 'users', to: 'users#index'
+  # get 'reviews', to: 'reviews#index'
 
   
 end
